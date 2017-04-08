@@ -1,0 +1,22 @@
+.site-header {
+  .container();
+  margin-bottom: 40px;
+}
+
+.site-header__top-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid #dbdbdb;
+
+  h1 {
+    margin: 15px 0;
+    font-size: 30px;
+    font-weight: 500;
+
+    @media @tablet-width {
+      font-size: 36px;
+    }
+  }
+}

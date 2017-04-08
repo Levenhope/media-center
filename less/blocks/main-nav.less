@@ -1,0 +1,117 @@
+.main-nav {
+  @media @desktop-width {
+    position: absolute;
+    right: 20px;
+    width: 240px;
+    font-family: "Open Sans", Verdana, sans-serif;
+  }
+}
+
+.main-nav__menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  list-style: none;
+
+  @media @tablet-width {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @media @desktop-width {
+    flex-direction: column;
+    margin: 0 0 35px;
+    padding-top: 25px;
+    border-top: 1px solid #dbdbdb;
+  }
+}
+
+.main-nav__item {
+  @media @tablet-width {
+    flex-basis: 50%;
+  }
+  @media @desktop-width {
+    margin-bottom: 20px;
+  }
+}
+
+.main-nav__label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 40px;
+
+  &::before {
+    content: "";
+    visibility: hidden;
+    display: block;
+    width: 18px;
+    height: 13px;
+    margin-right: 20px;
+    background-image: url("../img/icon-check.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media @tablet-width {
+    font-size: 24px;
+  }
+
+  @media @desktop-width {
+    font-size: 21px;
+    line-height: 27px;
+    font-weight: 600;
+
+    &::before {
+      margin-right: 10px;
+    }
+
+    span {
+      border-bottom: 1px dotted currentColor;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    span {
+      border-color: transparent;
+    }
+  }
+}
+
+.main-nav__check {
+  display: none;
+
+  &:checked + .main-nav__label {
+    color: @accent-color;
+
+    &::before {
+      visibility: visible;
+    }
+  }
+  
+}
+
+.main-nav__press-info {
+  display: none;
+
+  @media @desktop-width {
+    display: block;
+    padding: 18px;
+    padding-right: 80px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000000;
+    border: 3px solid #000000;
+    outline: none;
+    background-image: url("../img/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: 170px center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
