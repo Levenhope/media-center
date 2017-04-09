@@ -1,8 +1,8 @@
 {
-  "name": "pink",
+  "name": "defa",
   "version": "0.1.0",
   "private": true,
-  "description": "Личный проект «Пинк» от HTML Academy",
+  "description": "Тестовое задание DEFA",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "0.1.x",
     "autoprefixer": "6.7.x",
